@@ -1,0 +1,34 @@
+{
+  "name": "informatic_linear_motif",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Sina Kadkhodaei",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}
