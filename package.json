@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test-watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "find": "npm run build && node lib/index.js"
   },
   "files": [
     "lib/**/*"
