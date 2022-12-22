@@ -1,34 +1,28 @@
-# Fenglish
+# Fasta pattern finder
 
-<a href="https://www.npmjs.com/package/fenglish"><img src="https://img.shields.io/npm/v/fenglish?label=version" alt="Version"></a>
-<a href="https://www.npmjs.com/package/fenglish?minimal=true"><img src="https://img.shields.io/npm/dm/fenglish" alt="Downloads"></a>
-<img src="https://img.shields.io/github/workflow/status/kadsin/fenglish/Test?label=tests" alt="Tests">
-<img src="https://img.shields.io/github/license/kadsin/fenglish" alt="License">
+#### How to find a pattern in a fasta file by CLI:
 
-Includes utilities which play with persian texts for Fenglish purposes.
-
-## Install
-
-```bash
-npm i fenglish
+```BASH
+npm run find
 ```
 
-## Usages
+---
 
-### `toFenglish`
+## Apis
 
-This function takes a `Persian` text and returns its `Fenglish` text.
+#### How to find a pattern in a fasta file:
 
-**Notes:**
+```JS
+Import { Protein } from 'Protein'
 
--   Vowels are effective in the output of this function
--   _This function works correctly for "Alef", "Ayn", "Hamza", "Vaav" and "Ye" letters and not work correctly for other letters yet._ (**Work in progress...**)
+Protein.fasta('.../fasta-path').find('EQ')
+```
 
-#### Example
+#### How to find a pattern in a sequence:
 
-```js
-import { toFenglish } from 'fenglish'
+```JS
+Import { Protein } from 'Protein'
 
-const persian = 'آرامَم مَن!'
-console.log(toFenglish(persian)) // prints `aramam man!`
+const protein = new Protein('SEQUENCE')
+protein.find('EQ')
 ```
