@@ -2,10 +2,14 @@ import { Protein } from '../protein'
 
 describe('Protein', () => {
 	describe('indexOf(pattern)', () => {
-		const protein = new Protein('ATGCGCGACGGCGTGATCAGCTTATAGCCGTACGACTGCTGCAACGTGACTGATCGTACGACTGCTGCAACGTGACTGAT')
+		const protein = new Protein('RTRTRCGACGGCGTGATCAGCTTATAGCCGTACGRTAGCTGCAACGTGACTGATCGTACGACTGCTGCAACGTGACTGAT')
 
-		it('Should return correct index of finded motifs', () => {
+		it('Should return correct index of founded motifs', () => {
 			expect(protein.indexOf('ACG')).toStrictEqual([7, 31, 43, 57, 69])
+		})
+
+		it('Should cover the overlapped patterns', () => {
+			expect(protein.indexOf('RTR')).toStrictEqual([0, 2])
 		})
 
 		it('Should return empty array on invalid pattern', () => {

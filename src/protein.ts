@@ -27,6 +27,10 @@ export class Protein {
 			if(similarity === pattern.length) {
 				indices.push(i - pattern.length + 1)
 				similarity = 0
+
+				if(this.sequence[i] === pattern[similarity]) {
+					i -= pattern.length - 1
+				}
 			}
 		}
 
